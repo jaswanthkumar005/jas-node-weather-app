@@ -1,8 +1,4 @@
 
-
-console.log("javascript loggin");
-
-
 fetch("http://localhost:3000/weather?address=chennai").then((response)=>{
   response.json().then((data) => {
     console.log(data)
