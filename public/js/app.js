@@ -6,6 +6,7 @@ fetch("/weather?address=chennai").then((response)=>{
       console.log(data.error)
     } else {
       console.log(data.place)
+      console.log("test")
       console.log(data.forecast)
     }
   })
