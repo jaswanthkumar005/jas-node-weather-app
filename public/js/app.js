@@ -1,16 +1,5 @@
 
-fetch("/weather?address=chennai").then((response)=>{
-  response.json().then((data) => {
-    console.log(data)
-    if(data.error){
-      console.log(data.error)
-    } else {
-      console.log(data.place)
-      console.log("test")
-      console.log(data.forecast)
-    }
-  })
-})
+
 
 const weatherForm = document.querySelector('form')
 const search = document.querySelector('input')
@@ -22,7 +11,7 @@ weatherForm.addEventListener('submit',(e) =>{
   console.log("test"+val)
   messageOne.textContent = "loading..."
   messageTwo.textContent=""
-  fetch("http://localhost:3000/weather?address="+encodeURIComponent(val)).then((response)=>{
+  fetch("/weather?address="+encodeURIComponent(val)).then((response)=>{
   response.json().then((data) => {
     console.log(data)
     if(data.error){
