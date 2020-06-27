@@ -3,7 +3,7 @@ const geocode = (address, callback) =>{
   console.log(address+"twts");
   const url ="https://api.mapbox.com/geocoding/v5/mapbox.places/" +encodeURIComponent(address)+".json?access_token=pk.eyJ1IjoiamFzd2FudGgwMDUiLCJhIjoiY2tiajhwcHFsMG12YzJwcW5va2xyd3dlZyJ9.FmDqFYkUkr61M4qbbfuOyg"
  
-  request({url, json:true},(error,{body})=>{
+  request({url, json:true},(error,{body}={})=>{
    if(error){
      //console.log('unable to connect');
      callback('unable to connect',undefined);
