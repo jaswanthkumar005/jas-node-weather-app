@@ -5,7 +5,7 @@ const forecast = (longitude,latitude,callback) =>{
 
 request({url:url,json:true},(error,response) =>{
   //const data = JSON.parse(response.body)
- // console.log(response.body.current);
+  console.log(response.body.current);
  if(error){
    //console.log("unable to connect");
    callback("unable to connect",undefined)
@@ -18,7 +18,8 @@ request({url:url,json:true},(error,response) =>{
   
 
     callback(undefined,response.body.current.weather_descriptions[0]+". current  test temperature "+
-    response.body.current.temperature+" but it feels like "+response.body.current.feelslike)
+    response.body.current.temperature+" but it feels like "+response.body.current.feelslike
+    +"humbity is "+response.body.current.humidity+"%")
  }
   
 })
